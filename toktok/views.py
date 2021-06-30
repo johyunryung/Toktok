@@ -6,10 +6,11 @@ from django.views import generic
 from toktok.forms import IntroductionForm
 from toktok.models import Repository, Introduction, Comment
 
+def index(request): #Main Page
+    return render(request, 'toktok/Index.html')
 
 class RepositoryListView(generic.ListView):
     model = Repository
-
 
 class RepositoryDetailView(generic.DetailView):
     model = Repository
